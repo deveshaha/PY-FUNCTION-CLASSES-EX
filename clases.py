@@ -17,6 +17,11 @@
 # Se va a crear una clase llamada Triangulo() que hereda de la clase  Poligono().  
 # Al crear un objeto triangulo, se invoca al constructor de la clase Poligono() al que se indica el 
 # número de lados = 3. 
+
+# Punto 5:
+# La clase Triangulo() tendrá un método area( ) que calcule y muestre el área del triángulo. 
+# Puede ser cualquier tipo de triángulo. Puedes usar la fórmula de Herón.
+
  
 
 class Poligono:
@@ -41,6 +46,14 @@ class Poligono:
 class Triangulo(Poligono):
     def __init__(self):
         super().__init__(3)
+
+    def area(self):
+        a = self.lados[0]
+        b = self.lados[1]
+        c = self.lados[2]
+        s = (a + b + c) / 2
+        area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+        print(f'El área del triángulo es {area}')
         
     
 
@@ -60,6 +73,15 @@ Poligono.verLados(pol)
 print("\nPunto 4: \n")
 tri = Triangulo()
 print(tri.lados)
+
+print("\nPunto 5: \n")
+print("Introduce los valores de los lados del triángulo: ")
+Triangulo.darLados(valLado, tri)
+Triangulo.verLados(tri)
+Triangulo.area(tri)
+
+
+
 
 
 
