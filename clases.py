@@ -22,6 +22,15 @@
 # La clase Triangulo() tendrá un método area( ) que calcule y muestre el área del triángulo. 
 # Puede ser cualquier tipo de triángulo. Puedes usar la fórmula de Herón.
 
+# Punto 6:
+# La clase Triangulo() tendrá un método perimetro( ) que calcule y muestre el perímetro del 
+# triángulo (suma de sus lados).
+
+# Punto 7:
+# Crea dos objetos de la clase Triangulo() y muestra el resultado de ejecutar todos los 
+# métodos tanto de la clase Polígono() como de la clase Triangulo(). 
+ 
+
  
 
 class Poligono:
@@ -54,6 +63,10 @@ class Triangulo(Poligono):
         s = (a + b + c) / 2
         area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
         print(f'El área del triángulo es {area}')
+
+    def perimetro(self):
+        perimetro = sum(self.lados)
+        print(f'El perímetro del triángulo es {perimetro}')
         
     
 
@@ -79,6 +92,12 @@ print("Introduce los valores de los lados del triángulo: ")
 Triangulo.darLados(valLado, tri)
 Triangulo.verLados(tri)
 Triangulo.area(tri)
+
+print("\nPunto 6: \n")
+Triangulo.perimetro(tri)
+
+print("\nPunto 7: \n")
+
 
 
 
