@@ -31,8 +31,6 @@
 # métodos tanto de la clase Polígono() como de la clase Triangulo(). 
  
 
- 
-
 class Poligono:
     def __init__(self, num_lados):
         if num_lados < 3:
@@ -67,8 +65,8 @@ class Triangulo(Poligono):
     def perimetro(self):
         perimetro = sum(self.lados)
         print(f'El perímetro del triángulo es {perimetro}')
+
         
-    
 
 print("Punto 1: \n")
 pol = int(input("Introduce el número de lados del polígono: "))
@@ -97,6 +95,12 @@ print("\nPunto 6: \n")
 Triangulo.perimetro(tri)
 
 print("\nPunto 7: \n")
+tri2 = Triangulo()
+print("Introduce los valores de los lados del triángulo: ")
+Triangulo.darLados(valLado, tri2)
+Triangulo.verLados(tri2)
+Triangulo.area(tri2)
+Triangulo.perimetro(tri2)
 
 
 
