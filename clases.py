@@ -20,7 +20,7 @@ class Poligono:
 
     def darLados(valLado, pol):
         for i in range(pol.num_lados):
-            valLado = int(input("Introduce el valor del lado: "))
+            valLado = int(input(f'Introduce el valor del lado {i+1}: ''))
             pol.lados[i] = valLado
         
     
