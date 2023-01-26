@@ -18,7 +18,10 @@ class Poligono:
             for i in range(num_lados):
                 self.lados = [0] * num_lados
 
-
+    def darLados(valLado, pol):
+        for i in range(pol.num_lados):
+            valLado = int(input("Introduce el valor del lado: "))
+            pol.lados[i] = valLado
         
     
 
@@ -27,7 +30,10 @@ pol = int(input("Introduce el número de lados del polígono: "))
 pol = Poligono(pol)
 print(pol.lados)
 
-
+print("Punto 2: \n")
+valLado = 0
+Poligono.darLados(valLado, pol)
+print(pol.lados)
 
 
 
